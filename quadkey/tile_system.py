@@ -1,3 +1,7 @@
+try:
+    xrange
+except NameError:
+    xrange = range
 from util import precondition
 from math import sin, cos, atan, exp, log, pi
 
