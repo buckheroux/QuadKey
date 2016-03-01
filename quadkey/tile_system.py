@@ -1,3 +1,10 @@
+from __future__ import division
+
+try:
+    xrange
+except NameError:
+    xrange = range
+    
 from util import precondition
 from math import sin, cos, atan, exp, log, pi
 
@@ -84,7 +91,7 @@ class TileSystem:
     @staticmethod
     def pixel_to_tile(pixel):
         """Transform pixel to tile coordinates"""
-        return pixel[0] / 256, pixel[1] / 256
+        return pixel[0] // 256, pixel[1] // 256
 
     @staticmethod
     def tile_to_pixel(tile, centered=False):
